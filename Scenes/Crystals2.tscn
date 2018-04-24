@@ -1,0 +1,119 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/Caves/tile_cave_bg_fluo.png" type="Texture" id=1]
+
+[node name="Crystals2" type="Node" index="0"]
+
+[node name="Crystal1" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Crystal2" type="Sprite" parent="." index="1"]
+
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 64, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Crystal3" type="Sprite" parent="." index="2"]
+
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 128, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Crystal4" type="Sprite" parent="." index="3"]
+
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 32, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Crystal5" type="Sprite" parent="." index="4"]
+
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 256, 32, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Crystal6" type="Sprite" parent="." index="5"]
+
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 224, 32, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Crystal7" type="Sprite" parent="." index="6"]
+
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 288, 0, 96, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Crystal8" type="Sprite" parent="." index="7"]
+
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 384, 0, 128, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Crystal9" type="Sprite" parent="." index="8"]
+
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Crystal10" type="Sprite" parent="." index="9"]
+
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 64, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Crystal11" type="Sprite" parent="." index="10"]
+
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 128, 32, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Crystal12" type="Sprite" parent="." index="11"]
+
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 32, 128, 32, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Crystal13" type="Sprite" parent="." index="12"]
+
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 64, 128, 32, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Crystal14" type="Sprite" parent="." index="13"]
+
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 64, 128, 32, 64 )
+_sections_unfolded = [ "Region" ]
+
+
