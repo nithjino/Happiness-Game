@@ -1,2 +1,5 @@
 .directory
 opp-assets
+*.apk
+*.exe
+*.ipa
