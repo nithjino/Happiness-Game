@@ -8,32 +8,32 @@
 [ext_resource path="res://assets/idle/idle-5.png" type="Texture" id=6]
 [ext_resource path="res://assets/idle/idle-6.png" type="Texture" id=7]
 [ext_resource path="res://assets/idle/idle-7.png" type="Texture" id=8]
-[ext_resource path="res://assets/jump/jump-11.png" type="Texture" id=9]
-[ext_resource path="res://assets/jump/jump-12.png" type="Texture" id=10]
-[ext_resource path="res://assets/jump/jump-13.png" type="Texture" id=11]
-[ext_resource path="res://assets/jump/jump-14.png" type="Texture" id=12]
-[ext_resource path="res://assets/jump/jump-15.png" type="Texture" id=13]
-[ext_resource path="res://assets/jump/jump-16.png" type="Texture" id=14]
-[ext_resource path="res://assets/jump/jump-17.png" type="Texture" id=15]
-[ext_resource path="res://assets/jump/jump-18.png" type="Texture" id=16]
-[ext_resource path="res://assets/jump/jump-19.png" type="Texture" id=17]
-[ext_resource path="res://assets/jump/jump-2.png" type="Texture" id=18]
-[ext_resource path="res://assets/jump/jump-3.png" type="Texture" id=19]
-[ext_resource path="res://assets/jump/jump-4.png" type="Texture" id=20]
-[ext_resource path="res://assets/jump/jump-5.png" type="Texture" id=21]
-[ext_resource path="res://assets/jump/jump-6.png" type="Texture" id=22]
-[ext_resource path="res://assets/jump/jump-7.png" type="Texture" id=23]
-[ext_resource path="res://assets/jump/jump-8.png" type="Texture" id=24]
-[ext_resource path="res://assets/jump/jump-9.png" type="Texture" id=25]
-[ext_resource path="res://assets/jump/jump-10.png" type="Texture" id=26]
-[ext_resource path="res://assets/jump/jump-1.png" type="Texture" id=27]
-[ext_resource path="res://assets/walking/walk-0.png" type="Texture" id=28]
-[ext_resource path="res://assets/walking/walk-1.png" type="Texture" id=29]
-[ext_resource path="res://assets/walking/walk-2.png" type="Texture" id=30]
-[ext_resource path="res://assets/walking/walk-3.png" type="Texture" id=31]
-[ext_resource path="res://assets/walking/walk-4.png" type="Texture" id=32]
-[ext_resource path="res://assets/walking/walk-5.png" type="Texture" id=33]
-[ext_resource path="res://assets/walking/walk-7.png" type="Texture" id=34]
+[ext_resource path="res://assets/jump/jump-2.png" type="Texture" id=9]
+[ext_resource path="res://assets/jump/jump-3.png" type="Texture" id=10]
+[ext_resource path="res://assets/jump/jump-4.png" type="Texture" id=11]
+[ext_resource path="res://assets/jump/jump-5.png" type="Texture" id=12]
+[ext_resource path="res://assets/jump/jump-6.png" type="Texture" id=13]
+[ext_resource path="res://assets/jump/jump-7.png" type="Texture" id=14]
+[ext_resource path="res://assets/jump/jump-8.png" type="Texture" id=15]
+[ext_resource path="res://assets/jump/jump-9.png" type="Texture" id=16]
+[ext_resource path="res://assets/jump/jump-10.png" type="Texture" id=17]
+[ext_resource path="res://assets/jump/jump-1.png" type="Texture" id=18]
+[ext_resource path="res://assets/walking/walk-0.png" type="Texture" id=19]
+[ext_resource path="res://assets/walking/walk-1.png" type="Texture" id=20]
+[ext_resource path="res://assets/walking/walk-2.png" type="Texture" id=21]
+[ext_resource path="res://assets/walking/walk-3.png" type="Texture" id=22]
+[ext_resource path="res://assets/walking/walk-4.png" type="Texture" id=23]
+[ext_resource path="res://assets/walking/walk-5.png" type="Texture" id=24]
+[ext_resource path="res://assets/walking/walk-7.png" type="Texture" id=25]
+[ext_resource path="res://assets/jump/jump-11.png" type="Texture" id=26]
+[ext_resource path="res://assets/jump/jump-12.png" type="Texture" id=27]
+[ext_resource path="res://assets/jump/jump-13.png" type="Texture" id=28]
+[ext_resource path="res://assets/jump/jump-14.png" type="Texture" id=29]
+[ext_resource path="res://assets/jump/jump-15.png" type="Texture" id=30]
+[ext_resource path="res://assets/jump/jump-16.png" type="Texture" id=31]
+[ext_resource path="res://assets/jump/jump-17.png" type="Texture" id=32]
+[ext_resource path="res://assets/jump/jump-18.png" type="Texture" id=33]
+[ext_resource path="res://assets/jump/jump-19.png" type="Texture" id=34]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -43,25 +43,25 @@ animations = [ {
 "name": "idle",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
-"loop": true,
-"name": "jump_down",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
 "loop": true,
 "name": "jump_up",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 27 ) ],
+"frames": [ ExtResource( 18 ) ],
 "loop": true,
 "name": "duck",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ) ],
+"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ) ],
 "loop": true,
 "name": "walk",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ) ],
+"loop": true,
+"name": "jump_down",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -86,7 +86,7 @@ __meta__ = {
 
 frames = SubResource( 1 )
 animation = "idle"
-frame = 4
+frame = 5
 playing = true
 _sections_unfolded = [ "Offset", "Region" ]
 
@@ -94,5 +94,30 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 shape = SubResource( 2 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
 
 

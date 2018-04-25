@@ -1,0 +1,92 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/buttons/touch_left.png" type="Texture" id=1]
+[ext_resource path="res://assets/buttons/touch_left_pressed.png" type="Texture" id=2]
+[ext_resource path="res://assets/buttons/touch_right.png" type="Texture" id=3]
+[ext_resource path="res://assets/buttons/touch_right_pressed.png" type="Texture" id=4]
+[ext_resource path="res://assets/buttons/touch_jump.png" type="Texture" id=5]
+[ext_resource path="res://assets/buttons/touch_jump_pressed.png" type="Texture" id=6]
+[ext_resource path="res://assets/buttons/touch_z.png" type="Texture" id=7]
+[ext_resource path="res://assets/buttons/touch_z_pressed.png" type="Texture" id=8]
+
+[node name="GUI" type="CanvasLayer"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="LeftButton" type="TouchScreenButton" parent="." index="0"]
+
+position = Vector2( 32, 448 )
+scale = Vector2( 0.154964, 0.154964 )
+normal = ExtResource( 1 )
+pressed = ExtResource( 2 )
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = "ui_left"
+visibility_mode = 0
+
+[node name="DownButton" type="TouchScreenButton" parent="." index="1"]
+
+position = Vector2( 75.0496, 575.842 )
+rotation = 4.71239
+scale = Vector2( 0.154964, 0.154964 )
+normal = ExtResource( 1 )
+pressed = ExtResource( 2 )
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = "ui_down"
+visibility_mode = 0
+_sections_unfolded = [ "Transform" ]
+
+[node name="RightButton" type="TouchScreenButton" parent="." index="2"]
+
+position = Vector2( 128, 448 )
+scale = Vector2( 0.154964, 0.154964 )
+normal = ExtResource( 3 )
+pressed = ExtResource( 4 )
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = "ui_right"
+visibility_mode = 0
+
+[node name="JumpButton" type="TouchScreenButton" parent="." index="3"]
+
+position = Vector2( 864, 448 )
+scale = Vector2( 0.154964, 0.154964 )
+normal = ExtResource( 5 )
+pressed = ExtResource( 6 )
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = "ui_select"
+visibility_mode = 0
+
+[node name="ActionButton" type="TouchScreenButton" parent="." index="4"]
+
+position = Vector2( 960, 448 )
+scale = Vector2( 0.154964, 0.154964 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 8 )
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = "ui_z"
+visibility_mode = 0
+
+

@@ -8,30 +8,32 @@ var motion = Vector2()
 
 func _physics_process(delta):
 	motion.y += GRAVITY
-	
-	
-	if Input.is_action_pressed("ui_right"):
-		motion.x = SPEED
-		$Sprite.flip_h = false
-		$Sprite.play("walk")
-	elif Input.is_action_pressed("ui_left"):
-		motion.x = -SPEED
-		$Sprite.play("walk")
-		$Sprite.flip_h = true
+	if self.global_position.y > 705:
+		self.global_position.y = 545
+		self.global_position.x = 20	
 	else:
-		motion.x = 0
-		$Sprite.play("idle")
-		
-	if is_on_floor():
-		if Input.is_action_just_pressed("ui_accept"):
-			motion.y = JUMP_HEIGHT
-		if Input.is_action_pressed("ui_down"):
-			motion.x = 0
-			$Sprite.play("duck")
-	else:
-		if motion.y < 0:
-			$Sprite.play("jump_up")
+		if Input.is_action_pressed("ui_right"):
+			motion.x = SPEED
+			$Sprite.flip_h = false
+			$Sprite.play("walk")
+		elif Input.is_action_pressed("ui_left"):
+			motion.x = -SPEED
+			$Sprite.play("walk")
+			$Sprite.flip_h = true
 		else:
-			$Sprite.play("jump_down")
+			motion.x = 0
+			$Sprite.play("idle")
 			
-	motion = move_and_slide(motion,UP)
+		if is_on_floor():
+			if Input.is_action_just_pressed("ui_select"):
+				motion.y = JUMP_HEIGHT
+			if Input.is_action_pressed("ui_down"):
+				motion.x = 0
+				$Sprite.play("duck")
+		else:
+			if motion.y < 0:
+				$Sprite.play("jump_up")
+			else:
+				$Sprite.play("jump_down")
+				
+		motion = move_and_slide(motion,UP)

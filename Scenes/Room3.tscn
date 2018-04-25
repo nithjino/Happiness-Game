@@ -1,0 +1,153 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Change_World.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Tilesets/Volcano.tres" type="TileSet" id=3]
+[ext_resource path="res://Tilesets/tile_room.tres" type="TileSet" id=4]
+[ext_resource path="res://Tilesets/CaveFloor_fixed.tres" type="TileSet" id=5]
+[ext_resource path="res://Tilesets/ColorBG.tres" type="TileSet" id=6]
+[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=7]
+
+[node name="Room3" type="Node"]
+
+[node name="Player" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 0, 544 )
+
+[node name="Change_World" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( -32, 608 )
+room = "res://Scenes/Room2.tscn"
+
+[node name="Change_World2" parent="." index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 1056, 224 )
+room = "res://Scenes/Room2.tscn"
+
+[node name="tilemaps" type="Node" parent="." index="3"]
+
+[node name="volcano" type="TileMap" parent="tilemaps" index="0"]
+
+z_index = -1
+mode = 0
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 458753, 1, 0 )
+_sections_unfolded = [ "Z Index" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="tile_bg" type="TileMap" parent="tilemaps" index="1"]
+
+z_index = -2
+mode = 0
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 720898, 2, 0, 720912, 3, 0 )
+_sections_unfolded = [ "Cell", "Z Index" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="tile_room" type="TileMap" parent="tilemaps" index="2"]
+
+mode = 0
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 917517, 1, 0, 917518, 1, 0, 917519, 1, 0, 917520, 1, 0, 983044, 0, 0, 983046, 0, 0, 983048, 0, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="floor" type="TileMap" parent="tilemaps" index="3"]
+
+mode = 0
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65535, 2, 0, 33, 2, 0, 131071, 2, 0, 65569, 2, 0, 196607, 2, 0, 131105, 2, 0, 262143, 2, 0, 196641, 2, 0, 327679, 2, 0, 262177, 2, 0, 393215, 2, 0, 327685, 3, 0, 327686, 2, 0, 327687, 4, 0, 327701, 3, 0, 327702, 2, 0, 327703, 2, 0, 327704, 4, 0, 327709, 5, 0, 327710, 5, 0, 327711, 5, 0, 458751, 2, 0, 393231, 3, 0, 393232, 2, 0, 393233, 2, 0, 524287, 2, 0, 458754, 2, 0, 458764, 2, 0, 458784, 2, 0, 589823, 2, 0, 524320, 2, 0, 655359, 2, 0, 589856, 2, 0, 720895, 2, 0, 655365, 3, 0, 655366, 2, 0, 655367, 2, 0, 655368, 4, 0, 655392, 2, 0, 786431, 2, 0, 720907, 3, 0, 720908, 2, 0, 720909, 2, 0, 720910, 4, 0, 720928, 2, 0, 851967, 2, 0, 786464, 2, 0, 917503, 2, 0, 852000, 2, 0, 983039, 2, 0, 917516, 1, 0, 917527, 1, 0, 917532, 2, 0, 917533, 2, 0, 917534, 2, 0, 917535, 2, 0, 917536, 2, 0, 983042, 1, 0, 983043, 1, 0, 983051, 1, 0, 1048577, 1, 0, 1114112, 1, 0 )
+_sections_unfolded = [ "Cell" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="color" type="TileMap" parent="tilemaps" index="4"]
+
+z_index = -3
+mode = 0
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 1048580, 1, 0, 1048581, 1, 0, 1048582, 1, 0, 1048583, 1, 0, 1048584, 1, 0, 1048585, 1, 0, 1048586, 1, 0, 1048588, 1, 0, 1048589, 1, 0, 1048590, 1, 0, 1048591, 1, 0, 1048592, 1, 0, 1048593, 1, 0, 1048594, 1, 0, 1048595, 1, 0, 1048596, 1, 0, 1048597, 1, 0, 1048598, 1, 0, 1048599, 1, 0, 1048600, 1, 0, 1048601, 1, 0, 1048602, 1, 0, 1048603, 1, 0, 1048604, 1, 0, 1048605, 1, 0, 1048606, 1, 0, 1048607, 1, 0, 1114113, 1, 0, 1114114, 1, 0, 1114115, 1, 0, 1114116, 1, 0, 1114117, 1, 0, 1114118, 1, 0, 1114119, 1, 0, 1114120, 1, 0, 1114121, 1, 0, 1114122, 1, 0, 1114123, 1, 0, 1114124, 1, 0, 1114125, 1, 0, 1114126, 1, 0, 1114127, 1, 0, 1114128, 1, 0, 1114129, 1, 0, 1114130, 1, 0, 1114131, 1, 0, 1114132, 1, 0, 1114133, 1, 0, 1114134, 1, 0, 1114135, 1, 0, 1114136, 1, 0, 1114137, 1, 0, 1114138, 1, 0, 1114139, 1, 0, 1114140, 1, 0, 1114141, 1, 0, 1114142, 1, 0, 1114143, 1, 0, 1179649, 1, 0, 1179650, 1, 0, 1179651, 1, 0, 1179652, 1, 0, 1179653, 1, 0, 1179654, 1, 0, 1179655, 1, 0, 1179656, 1, 0, 1179657, 1, 0, 1179658, 1, 0, 1179659, 1, 0, 1179660, 1, 0, 1179661, 1, 0, 1179662, 1, 0, 1179663, 1, 0, 1179664, 1, 0, 1179665, 1, 0, 1179666, 1, 0, 1179667, 1, 0, 1179668, 1, 0, 1179669, 1, 0, 1179670, 1, 0, 1179671, 1, 0, 1179672, 1, 0, 1179673, 1, 0, 1179674, 1, 0, 1179675, 1, 0, 1179676, 1, 0, 1179677, 1, 0, 1179678, 1, 0, 1179679, 1, 0 )
+_sections_unfolded = [ "Cell", "Z Index" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="GUI" parent="." index="4" instance=ExtResource( 7 )]
+
+
