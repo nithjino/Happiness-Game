@@ -1,6 +1,6 @@
 extends RichTextLabel
 
-var dialog = ["Hey! This is the demo for the Happiness Project!","Enter the temple to start.","You can enter by pressing 'z'"]
+var dialog = ["Hey! This is the demo for the Happiness Project!","Enter the temple to start.","You can enter by pressing 'z' or the action button"]
 var page = 0
 var talkingToPerson = false
 

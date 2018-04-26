@@ -1,0 +1,304 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/cloud_bg.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/npc_guide.gd" type="Script" id=3]
+[ext_resource path="res://assets/npc/npc_idle-0.png" type="Texture" id=4]
+[ext_resource path="res://assets/npc/npc_idle-1.png" type="Texture" id=5]
+[ext_resource path="res://assets/npc/npc_idle-2.png" type="Texture" id=6]
+[ext_resource path="res://assets/npc/npc_idle-3.png" type="Texture" id=7]
+[ext_resource path="res://assets/npc/npc_idle-4.png" type="Texture" id=8]
+[ext_resource path="res://assets/npc/npc_idle-5.png" type="Texture" id=9]
+[ext_resource path="res://assets/npc/npc_idle-6.png" type="Texture" id=10]
+[ext_resource path="res://assets/npc/npc_idle-7.png" type="Texture" id=11]
+[ext_resource path="res://assets/npc/npc_idle-8.png" type="Texture" id=12]
+[ext_resource path="res://assets/npc/npc_idle-9.png" type="Texture" id=13]
+[ext_resource path="res://assets/npc/npc_idle-10.png" type="Texture" id=14]
+[ext_resource path="res://assets/npc/npc_idle-11.png" type="Texture" id=15]
+[ext_resource path="res://assets/npc/npc_idle-12.png" type="Texture" id=16]
+[ext_resource path="res://assets/npc/npc_idle-13.png" type="Texture" id=17]
+[ext_resource path="res://assets/npc/npc_idle-14.png" type="Texture" id=18]
+[ext_resource path="res://assets/npc/npc_idle-15.png" type="Texture" id=19]
+[ext_resource path="res://Scripts/IntroDialogue.gd" type="Script" id=20]
+[ext_resource path="res://Tilesets/SpeechBubbles.tres" type="TileSet" id=21]
+[ext_resource path="res://Tilesets/TempleEntranceTileset.tres" type="TileSet" id=22]
+[ext_resource path="res://Tilesets/CaveFloor_fixed.tres" type="TileSet" id=23]
+[ext_resource path="res://Tilesets/Cave.tres" type="TileSet" id=24]
+[ext_resource path="res://Tilesets/Dirt.tres" type="TileSet" id=25]
+[ext_resource path="res://Scripts/EnterTemple.gd" type="Script" id=26]
+[ext_resource path="res://Scenes/DialogBox.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Camera.tscn" type="PackedScene" id=28]
+[ext_resource path="res://assets/audio/music.ogg" type="AudioStream" id=29]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 34 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[node name="World" type="Node"]
+
+[node name="Player" parent="." index="0" instance=ExtResource( 1 )]
+
+editor/display_folded = true
+position = Vector2( 64, 544 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Player" index="4"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Player/ParallaxBackground" index="0"]
+
+motion_scale = Vector2( 0.1, 0.1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1750, 980 )
+_sections_unfolded = [ "Motion", "Z Index" ]
+
+[node name="Sprite" type="Sprite" parent="Player/ParallaxBackground/ParallaxLayer" index="0"]
+
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="npc_guide" type="KinematicBody2D" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 544, 482 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 2
+collision/safe_margin = 0.08
+script = ExtResource( 3 )
+_sections_unfolded = [ "Collision", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="npc_guide" index="0"]
+
+frames = SubResource( 1 )
+animation = "idle"
+
+[node name="Area2D" type="Area2D" parent="npc_guide/AnimatedSprite" index="0"]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 20 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npc_guide/AnimatedSprite/Area2D" index="0"]
+
+shape = SubResource( 2 )
+
+[node name="Tilemaps" type="Node" parent="." index="2"]
+
+editor/display_folded = true
+
+[node name="Speech" type="TileMap" parent="Tilemaps" index="0"]
+
+position = Vector2( 10, 10 )
+mode = 0
+tile_set = ExtResource( 21 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 851984, 0, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Plants" type="TileMap" parent="Tilemaps" index="1"]
+
+position = Vector2( 10, 384 )
+mode = 0
+tile_set = ExtResource( 22 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65562, 2, 0, 65566, 2, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TempleEntrance" type="TileMap" parent="Tilemaps" index="2"]
+
+position = Vector2( 32, 384 )
+z_index = -1
+mode = 0
+tile_set = ExtResource( 22 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -65510, 6, 0, -65509, 4, 0, -65508, 6, 0, -65507, 3, 0, -65506, 7, 0, 26, 10, 0, 27, 0, 0, 30, 10, 0, 65562, 5, 0, 65566, 5, 0, 131098, 9, 0, 131102, 9, 0, 196634, 7, 0, 196638, 7, 0 )
+_sections_unfolded = [ "Z Index" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Floor" type="TileMap" parent="Tilemaps" index="3"]
+
+z_index = -1
+mode = 0
+tile_set = ExtResource( 23 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 983055, 6, 0, 983056, 6, 0, 983057, 6, 0, 983058, 6, 0, 983059, 6, 0, 983063, 6, 0, 983064, 6, 0, 983065, 6, 0, 983066, 5, 0, 983067, 5, 0, 983068, 5, 0, 983069, 5, 0, 983070, 5, 0, 983071, 5, 0, 1114112, 6, 0, 1114113, 6, 0, 1114114, 6, 0, 1114115, 6, 0, 1114116, 6, 0, 1114117, 6, 0, 1114118, 6, 0, 1114119, 6, 0, 1114120, 6, 0, 1114121, 6, 0, 1114122, 6, 0, 1114123, 6, 0, 1114124, 6, 0 )
+_sections_unfolded = [ "Cell", "Transform", "Z Index" ]
+
+[node name="Cave" type="TileMap" parent="Tilemaps" index="4"]
+
+mode = 0
+tile_set = ExtResource( 24 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 1048608, 11, 0 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="Dirt" type="TileMap" parent="Tilemaps" index="5"]
+
+mode = 0
+tile_set = ExtResource( 25 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 1114127, 1, 0, 1114128, 7, 0, 1114129, 3, 0, 1114130, 4, 0, 1114131, 2, 0, 1114135, 1, 0, 1114136, 7, 0, 1114137, 7, 0, 1114138, 7, 0, 1114139, 7, 0, 1114140, 3, 0, 1114141, 4, 0, 1114142, 7, 0, 1114143, 7, 0, 1114144, 2, 0, 1179663, 1, 0, 1179664, 7, 0, 1179665, 7, 0, 1179666, 7, 0, 1179667, 2, 0, 1179671, 1, 0, 1179672, 7, 0, 1179673, 7, 0, 1179674, 7, 0, 1179675, 7, 0, 1179676, 7, 0, 1179677, 7, 0, 1179678, 7, 0, 1179679, 7, 0, 1179680, 2, 0, 1245184, 1, 0, 1245185, 7, 0, 1245186, 7, 0, 1245187, 7, 0, 1245188, 7, 0, 1245189, 3, 0, 1245190, 4, 0, 1245191, 7, 0, 1245192, 7, 0, 1245193, 7, 0, 1245194, 7, 0, 1245195, 7, 0, 1245196, 2, 0, 1245199, 1, 0, 1245200, 7, 0, 1245201, 7, 0, 1245202, 7, 0, 1245203, 2, 0, 1245207, 1, 0, 1245208, 7, 0, 1245209, 7, 0, 1245210, 7, 0, 1245211, 7, 0, 1245212, 7, 0, 1245213, 7, 0, 1245214, 7, 0, 1245215, 7, 0, 1245216, 2, 0, 1310720, 1, 0, 1310721, 7, 0, 1310722, 7, 0, 1310723, 7, 0, 1310724, 7, 0, 1310725, 7, 0, 1310726, 7, 0, 1310727, 7, 0, 1310728, 7, 0, 1310729, 7, 0, 1310730, 7, 0, 1310731, 7, 0, 1310732, 2, 0, 1310735, 1, 0, 1310736, 7, 0, 1310737, 7, 0, 1310738, 7, 0, 1310739, 2, 0, 1310743, 1, 0, 1310744, 7, 0, 1310745, 7, 0, 1310746, 7, 0, 1310747, 7, 0, 1310748, 7, 0, 1310749, 7, 0, 1310750, 7, 0, 1310751, 7, 0, 1310752, 2, 0, 1376256, 1, 0, 1376257, 7, 0, 1376258, 7, 0, 1376259, 7, 0, 1376260, 7, 0, 1376261, 7, 0, 1376262, 7, 0, 1376263, 7, 0, 1376264, 7, 0, 1376265, 7, 0, 1376266, 7, 0, 1376267, 7, 0, 1376268, 2, 0, 1376271, 1, 0, 1376272, 7, 0, 1376273, 7, 0, 1376274, 7, 0, 1376275, 2, 0, 1376279, 1, 0, 1376280, 7, 0, 1376281, 7, 0, 1376282, 7, 0, 1376283, 7, 0, 1376284, 7, 0, 1376285, 7, 0, 1376286, 7, 0, 1376287, 7, 0, 1376288, 2, 0, 1441792, 1, 0, 1441793, 7, 0, 1441794, 7, 0, 1441795, 7, 0, 1441796, 7, 0, 1441797, 7, 0, 1441798, 7, 0, 1441799, 7, 0, 1441800, 7, 0, 1441801, 7, 0, 1441802, 7, 0, 1441803, 7, 0, 1441804, 2, 0, 1441807, 1, 0, 1441808, 7, 0, 1441809, 7, 0, 1441810, 7, 0, 1441811, 2, 0, 1441815, 1, 0, 1441816, 7, 0, 1441817, 7, 0, 1441818, 7, 0, 1441819, 7, 0, 1441820, 7, 0, 1441821, 7, 0, 1441822, 7, 0, 1441823, 7, 0, 1441824, 2, 0, 1507328, 5, 0, 1507329, 0, 0, 1507330, 0, 0, 1507331, 0, 0, 1507332, 0, 0, 1507333, 0, 0, 1507334, 0, 0, 1507335, 0, 0, 1507336, 0, 0, 1507337, 0, 0, 1507338, 0, 0, 1507339, 0, 0, 1507340, 6, 0, 1507343, 5, 0, 1507344, 0, 0, 1507345, 0, 0, 1507346, 0, 0, 1507347, 6, 0, 1507351, 5, 0, 1507352, 0, 0, 1507353, 0, 0, 1507354, 0, 0, 1507355, 0, 0, 1507356, 0, 0, 1507357, 0, 0, 1507358, 0, 0, 1507359, 0, 0, 1507360, 6, 0 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="EnterTemple" type="Area2D" parent="." index="3"]
+
+editor/display_folded = true
+position = Vector2( 944, 464 )
+scale = Vector2( 1.5, 1.5 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnterTemple" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="DialogBox" parent="." index="4" instance=ExtResource( 27 )]
+
+visible = false
+position = Vector2( 256, 160 )
+scale = Vector2( 0.5, 0.5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Camera" parent="." index="5" instance=ExtResource( 28 )]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="6"]
+
+stream = ExtResource( 29 )
+volume_db = 0.0
+autoplay = true
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+

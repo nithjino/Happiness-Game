@@ -6,7 +6,7 @@
 
 polygon = PoolVector2Array( 128, 320, 128, 480, 896, 480, 896, 320 )
 uv = PoolVector2Array(  )
-color = Color( 0, 0, 0, 0.44749 )
+color = Color( 0.179688, 0.163193, 0.163193, 1 )
 vertex_colors = PoolColorArray(  )
 offset = Vector2( 0, 0 )
 antialiased = false

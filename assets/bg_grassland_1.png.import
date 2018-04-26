@@ -10,7 +10,7 @@ source_file="res://assets/bg_grassland_1.png"
 source_md5="83507e887b273a42472a37c5ba89025e"
 
 dest_files=[ "res://.import/bg_grassland_1.png-6c3608010d9704db4969f98978367dfb.stex" ]
-dest_md5="45b395c590b9db81d644d89726420884"
+dest_md5="bedaf103f2d1b9ed42c108fcd1038dfa"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

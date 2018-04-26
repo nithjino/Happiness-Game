@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Change_World.tscn" type="PackedScene" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://Tilesets/tile_room.tres" type="TileSet" id=4]
 [ext_resource path="res://Tilesets/CaveFloor_fixed.tres" type="TileSet" id=5]
 [ext_resource path="res://Tilesets/ColorBG.tres" type="TileSet" id=6]
-[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=7]
 
 [node name="Room3" type="Node"]
 
@@ -17,12 +16,12 @@ position = Vector2( 0, 544 )
 [node name="Change_World" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( -32, 608 )
-room = "res://Scenes/Room2.tscn"
+room = "res://Scenes/Rooms/Room2.tscn"
 
 [node name="Change_World2" parent="." index="2" instance=ExtResource( 2 )]
 
 position = Vector2( 1056, 224 )
-room = "res://Scenes/Room2.tscn"
+room = "res://Scenes/Rooms/Root.tscn"
 
 [node name="tilemaps" type="Node" parent="." index="3"]
 
@@ -147,7 +146,5 @@ _sections_unfolded = [ "Cell", "Z Index" ]
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="GUI" parent="." index="4" instance=ExtResource( 7 )]
 
 

@@ -5,4 +5,4 @@ func _physics_process(delta):
 	for body in bodies:
 		if body.name == "Player":
 			if Input.is_action_pressed("ui_z"):
-				get_tree().change_scene("res://Scenes/Room2.tscn")
+				get_tree().change_scene("res://Scenes/Rooms/Room2.tscn")

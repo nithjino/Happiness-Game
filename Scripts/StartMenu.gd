@@ -6,9 +6,8 @@ func _ready():
 	pass
 
 
-func _on_StartButton_pressed():
-	get_tree().change_scene("res://Scenes/Root.tscn")
-
+func _on_AboutButton_pressed():
+	get_tree().change_scene("res://Scenes/About.tscn")
 
 func _on_ExitButton_pressed():
 	get_tree().quit()
@@ -33,4 +32,4 @@ func _on_Area2D_mouse_exited():
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if ((event is InputEventMouseButton and event.pressed) or (event is InputEventScreenTouch)):
-		get_tree().change_scene("res://Scenes/Root.tscn")
+		get_tree().change_scene("res://Scenes/Rooms/Root.tscn")

@@ -1,0 +1,164 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/About.gd" type="Script" id=1]
+[ext_resource path="res://assets/opp_logo.png" type="Texture" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+
+[node name="Control" type="Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+
+[node name="opp_logo" type="Sprite" parent="." index="0"]
+
+position = Vector2( 800, 512 )
+scale = Vector2( 2.5368, 2.65 )
+texture = ExtResource( 2 )
+
+[node name="icon" type="Sprite" parent="." index="1"]
+
+position = Vector2( 224, 512 )
+scale = Vector2( 4.5, 4.5 )
+texture = ExtResource( 3 )
+
+[node name="Polygon2D" type="Polygon2D" parent="." index="2"]
+
+z_index = -1
+polygon = PoolVector2Array( 0, 0, 0, 736, 1280, 736, 1280, 0 )
+uv = PoolVector2Array(  )
+color = Color( 0, 0, 0, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Github" type="RichTextLabel" parent="Polygon2D" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 320.0
+margin_top = 160.0
+margin_right = 896.0
+margin_bottom = 192.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Github: https://github.com/nithjino/Happiness-Game"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+
+[node name="Tech" type="RichTextLabel" parent="Polygon2D" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 320.0
+margin_top = 192.0
+margin_right = 896.0
+margin_bottom = 224.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Technology used: Godot Engine with GDScript"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+
+[node name="Art" type="RichTextLabel" parent="Polygon2D" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 320.0
+margin_top = 224.0
+margin_right = 896.0
+margin_bottom = 256.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Art is from Open Pixel Project"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+
+[node name="BackButton" type="Button" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 160.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Back"
+flat = false
+align = 1
+
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
+
+
