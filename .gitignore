@@ -3,3 +3,5 @@ opp-assets
 *.apk
 *.exe
 *.ipa
+windows_build
+linux_build
