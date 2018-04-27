@@ -1,6 +1,7 @@
 extends RichTextLabel
 
-var dialog = ["Hey! This is the demo for the Happiness Project!","Enter the temple to start.","You can enter by pressing 'z' or the action button"]
+var dialog = ["The Georgia Peach Festival needs your help!","They need more peaches to help make the world's largest peach cobbler ",
+				"Go down into the temple to get the best peaches!","You can enter by pressing 'z' or the action button"]
 var page = 0
 var talkingToPerson = false
 

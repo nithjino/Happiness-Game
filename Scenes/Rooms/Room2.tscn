@@ -21,7 +21,7 @@
 [ext_resource path="res://assets/treasure/chest-11.png" type="Texture" id=19]
 [ext_resource path="res://assets/treasure/chest-12.png" type="Texture" id=20]
 [ext_resource path="res://Scripts/Chest.gd" type="Script" id=21]
-[ext_resource path="res://assets/treasure/icon_recycled.png" type="Texture" id=22]
+[ext_resource path="res://assets/food.png" type="Texture" id=22]
 [ext_resource path="res://Scripts/gold_coin.gd" type="Script" id=23]
 [ext_resource path="res://assets/audio/sound_coin.wav" type="AudioStream" id=24]
 [ext_resource path="res://assets/audio/music.ogg" type="AudioStream" id=25]
@@ -160,7 +160,6 @@ __meta__ = {
 
 [node name="Player" parent="." index="1" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 position = Vector2( 32, 544 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Player" index="4"]
@@ -230,22 +229,18 @@ editor/display_folded = true
 [node name="coin 1" type="Sprite" parent="Coins" index="0"]
 
 editor/display_folded = true
-position = Vector2( 128, 544 )
+position = Vector2( 122, 544 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 22 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 224, 160, 32, 32 )
+region_rect = Rect2( 207.095, 0, 69.0316, 64 )
 script = ExtResource( 23 )
-_sections_unfolded = [ "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
+_sections_unfolded = [ "Region", "Transform" ]
 
 [node name="Area2D" type="Area2D" parent="Coins/coin 1" index="0"]
 
-editor/display_folded = true
-position = Vector2( 16, 16 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 44, 32 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -256,8 +251,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/coin 1/Area2D" index="0"]
 
-position = Vector2( 0, 2 )
-scale = Vector2( 0.6, 0.6 )
+position = Vector2( 1, 3 )
+scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
@@ -265,21 +260,17 @@ _sections_unfolded = [ "Transform" ]
 
 editor/display_folded = true
 position = Vector2( 192, 512 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 22 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 224, 160, 32, 32 )
+region_rect = Rect2( 207.095, 0, 69.0316, 64 )
 script = ExtResource( 23 )
-_sections_unfolded = [ "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
+_sections_unfolded = [ "Region", "Transform" ]
 
 [node name="Area2D" type="Area2D" parent="Coins/coin 2" index="0"]
 
-editor/display_folded = true
-position = Vector2( 16, 16 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 44, 32 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -290,8 +281,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/coin 2/Area2D" index="0"]
 
-position = Vector2( 0, 2 )
-scale = Vector2( 0.6, 0.6 )
+position = Vector2( 1, 3 )
+scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
@@ -299,21 +290,17 @@ _sections_unfolded = [ "Transform" ]
 
 editor/display_folded = true
 position = Vector2( 416, 320 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 22 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 224, 160, 32, 32 )
+region_rect = Rect2( 207.095, 0, 69.0316, 64 )
 script = ExtResource( 23 )
-_sections_unfolded = [ "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
+_sections_unfolded = [ "Region", "Transform" ]
 
 [node name="Area2D" type="Area2D" parent="Coins/coin 3" index="0"]
 
-editor/display_folded = true
-position = Vector2( 16, 16 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 44, 32 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -324,8 +311,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/coin 3/Area2D" index="0"]
 
-position = Vector2( 0, 2 )
-scale = Vector2( 0.6, 0.6 )
+position = Vector2( 1, 3 )
+scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
@@ -333,21 +320,17 @@ _sections_unfolded = [ "Transform" ]
 
 editor/display_folded = true
 position = Vector2( 0, 64 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 22 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 224, 160, 32, 32 )
+region_rect = Rect2( 207.095, 0, 69.0316, 64 )
 script = ExtResource( 23 )
-_sections_unfolded = [ "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
+_sections_unfolded = [ "Region", "Transform" ]
 
 [node name="Area2D" type="Area2D" parent="Coins/coin 4" index="0"]
 
-editor/display_folded = true
-position = Vector2( 16, 16 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 44, 32 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -358,8 +341,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/coin 4/Area2D" index="0"]
 
-position = Vector2( 0, 2 )
-scale = Vector2( 0.6, 0.6 )
+position = Vector2( 1, 3 )
+scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
@@ -367,21 +350,17 @@ _sections_unfolded = [ "Transform" ]
 
 editor/display_folded = true
 position = Vector2( 832, 96 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 22 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 224, 160, 32, 32 )
+region_rect = Rect2( 207.095, 0, 69.0316, 64 )
 script = ExtResource( 23 )
-_sections_unfolded = [ "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
+_sections_unfolded = [ "Region", "Transform" ]
 
 [node name="Area2D" type="Area2D" parent="Coins/coin 5" index="0"]
 
-editor/display_folded = true
-position = Vector2( 16, 16 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 44, 32 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -392,8 +371,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/coin 5/Area2D" index="0"]
 
-position = Vector2( 0, 2 )
-scale = Vector2( 0.6, 0.6 )
+position = Vector2( 1, 3 )
+scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
@@ -401,21 +380,17 @@ _sections_unfolded = [ "Transform" ]
 
 editor/display_folded = true
 position = Vector2( 992, 480 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 22 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 224, 160, 32, 32 )
+region_rect = Rect2( 207.095, 0, 69.0316, 64 )
 script = ExtResource( 23 )
-_sections_unfolded = [ "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
+_sections_unfolded = [ "Region", "Transform" ]
 
 [node name="Area2D" type="Area2D" parent="Coins/coin 6" index="0"]
 
-editor/display_folded = true
-position = Vector2( 16, 16 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 44, 32 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -426,8 +401,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/coin 6/Area2D" index="0"]
 
-position = Vector2( 0, 2 )
-scale = Vector2( 0.6, 0.6 )
+position = Vector2( 1, 3 )
+scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
@@ -435,21 +410,17 @@ _sections_unfolded = [ "Transform" ]
 
 editor/display_folded = true
 position = Vector2( 768, -256 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 22 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 224, 160, 32, 32 )
+region_rect = Rect2( 207.095, 0, 69.0316, 64 )
 script = ExtResource( 23 )
-_sections_unfolded = [ "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
+_sections_unfolded = [ "Region", "Transform" ]
 
 [node name="Area2D" type="Area2D" parent="Coins/coin 7" index="0"]
 
-editor/display_folded = true
-position = Vector2( 16, 16 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 44, 32 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -460,8 +431,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/coin 7/Area2D" index="0"]
 
-position = Vector2( 0, 2 )
-scale = Vector2( 0.6, 0.6 )
+position = Vector2( 1, 3 )
+scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
@@ -469,21 +440,17 @@ _sections_unfolded = [ "Transform" ]
 
 editor/display_folded = true
 position = Vector2( 960, -384 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 22 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 224, 160, 32, 32 )
+region_rect = Rect2( 207.095, 0, 69.0316, 64 )
 script = ExtResource( 23 )
-_sections_unfolded = [ "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
+_sections_unfolded = [ "Region", "Transform" ]
 
 [node name="Area2D" type="Area2D" parent="Coins/coin 8" index="0"]
 
-editor/display_folded = true
-position = Vector2( 16, 16 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 44, 32 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -494,8 +461,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/coin 8/Area2D" index="0"]
 
-position = Vector2( 0, 2 )
-scale = Vector2( 0.6, 0.6 )
+position = Vector2( 1, 3 )
+scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
@@ -503,21 +470,17 @@ _sections_unfolded = [ "Transform" ]
 
 editor/display_folded = true
 position = Vector2( 0, -128 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 22 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 224, 160, 32, 32 )
+region_rect = Rect2( 207.095, 0, 69.0316, 64 )
 script = ExtResource( 23 )
-_sections_unfolded = [ "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
+_sections_unfolded = [ "Region", "Transform" ]
 
 [node name="Area2D" type="Area2D" parent="Coins/coin 9" index="0"]
 
-editor/display_folded = true
-position = Vector2( 16, 16 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 44, 32 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -528,8 +491,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/coin 9/Area2D" index="0"]
 
-position = Vector2( 0, 2 )
-scale = Vector2( 0.6, 0.6 )
+position = Vector2( 1, 3 )
+scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
@@ -537,21 +500,17 @@ _sections_unfolded = [ "Transform" ]
 
 editor/display_folded = true
 position = Vector2( 32, -512 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 22 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 224, 160, 32, 32 )
+region_rect = Rect2( 207.095, 0, 69.0316, 64 )
 script = ExtResource( 23 )
-_sections_unfolded = [ "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
+_sections_unfolded = [ "Region", "Transform" ]
 
 [node name="Area2D" type="Area2D" parent="Coins/coin 10" index="0"]
 
-editor/display_folded = true
-position = Vector2( 16, 16 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 44, 32 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -562,8 +521,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/coin 10/Area2D" index="0"]
 
-position = Vector2( 0, 2 )
-scale = Vector2( 0.6, 0.6 )
+position = Vector2( 1, 3 )
+scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
@@ -571,21 +530,17 @@ _sections_unfolded = [ "Transform" ]
 
 editor/display_folded = true
 position = Vector2( 480, -608 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 22 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 224, 160, 32, 32 )
+region_rect = Rect2( 207.095, 0, 69.0316, 64 )
 script = ExtResource( 23 )
-_sections_unfolded = [ "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
+_sections_unfolded = [ "Region", "Transform" ]
 
 [node name="Area2D" type="Area2D" parent="Coins/coin 11" index="0"]
 
-editor/display_folded = true
-position = Vector2( 16, 16 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 44, 32 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -596,8 +551,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/coin 11/Area2D" index="0"]
 
-position = Vector2( 0, 2 )
-scale = Vector2( 0.6, 0.6 )
+position = Vector2( 1, 3 )
+scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
@@ -605,21 +560,17 @@ _sections_unfolded = [ "Transform" ]
 
 editor/display_folded = true
 position = Vector2( 96, -672 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 22 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 224, 160, 32, 32 )
+region_rect = Rect2( 207.095, 0, 69.0316, 64 )
 script = ExtResource( 23 )
-_sections_unfolded = [ "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
+_sections_unfolded = [ "Region", "Transform" ]
 
 [node name="Area2D" type="Area2D" parent="Coins/coin 12" index="0"]
 
-editor/display_folded = true
-position = Vector2( 16, 16 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 44, 32 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -630,8 +581,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/coin 12/Area2D" index="0"]
 
-position = Vector2( 0, 2 )
-scale = Vector2( 0.6, 0.6 )
+position = Vector2( 1, 3 )
+scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
@@ -639,21 +590,17 @@ _sections_unfolded = [ "Transform" ]
 
 editor/display_folded = true
 position = Vector2( 544, -480 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 22 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 224, 160, 32, 32 )
+region_rect = Rect2( 207.095, 0, 69.0316, 64 )
 script = ExtResource( 23 )
-_sections_unfolded = [ "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
+_sections_unfolded = [ "Region", "Transform" ]
 
 [node name="Area2D" type="Area2D" parent="Coins/coin 13" index="0"]
 
-editor/display_folded = true
-position = Vector2( 16, 16 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 44, 32 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -664,8 +611,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/coin 13/Area2D" index="0"]
 
-position = Vector2( 0, 2 )
-scale = Vector2( 0.6, 0.6 )
+position = Vector2( 1, 3 )
+scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
@@ -673,21 +620,17 @@ _sections_unfolded = [ "Transform" ]
 
 editor/display_folded = true
 position = Vector2( 864, -608 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 22 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 224, 160, 32, 32 )
+region_rect = Rect2( 207.095, 0, 69.0316, 64 )
 script = ExtResource( 23 )
-_sections_unfolded = [ "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
+_sections_unfolded = [ "Region", "Transform" ]
 
 [node name="Area2D" type="Area2D" parent="Coins/coin 14" index="0"]
 
-editor/display_folded = true
-position = Vector2( 16, 16 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 44, 32 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -698,34 +641,62 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/coin 14/Area2D" index="0"]
 
-position = Vector2( 0, 2 )
-scale = Vector2( 0.6, 0.6 )
+position = Vector2( 1, 3 )
+scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="got_coin" type="AudioStreamPlayer2D" parent="Coins" index="14"]
+[node name="got_coin" type="AudioStreamPlayer" parent="Coins" index="14"]
 
 stream = ExtResource( 24 )
 volume_db = 0.0
 autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
+mix_target = 0
 bus = "Master"
-area_mask = 1
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="5"]
+[node name="Background_music" type="AudioStreamPlayer" parent="." index="5"]
 
 stream = ExtResource( 25 )
-volume_db = 0.0
+volume_db = -10.0
 autoplay = true
-max_distance = 2000.0
-attenuation = 1.0
+mix_target = 0
 bus = "Master"
-area_mask = 1
+
+[node name="ChestLabel" type="RichTextLabel" parent="." index="6"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 608.0
+margin_top = -736.0
+margin_right = 1024.0
+margin_bottom = -608.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+bbcode_enabled = false
+bbcode_text = "You need to collect all the peaches in this room!"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "You need to collect all the peaches in this room!"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode" ]
 
 [connection signal="animation_finished" from="Chest" to="Chest" method="_on_Chest_animation_finished"]
 
 [connection signal="body_entered" from="Chest/StaticBody2D" to="Chest" method="_on_StaticBody2D_body_entered"]
+
+[connection signal="body_exited" from="Chest/StaticBody2D" to="Chest" method="_on_StaticBody2D_body_exited"]
 
 [connection signal="body_entered" from="Coins/coin 1/Area2D" to="Coins/coin 1" method="_on_Area2D_body_entered"]
 

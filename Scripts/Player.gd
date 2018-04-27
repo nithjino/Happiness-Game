@@ -10,7 +10,6 @@ var coins = 0
 
 func _ready():
 	var os = OS.get_name() 
-	print(os)
 	if os == "X11" or os == "Windows" or os == "OSX":
 		$GUI.hide()
 	else:

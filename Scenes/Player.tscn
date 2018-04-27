@@ -9,32 +9,32 @@
 [ext_resource path="res://assets/idle/idle-5.png" type="Texture" id=7]
 [ext_resource path="res://assets/idle/idle-6.png" type="Texture" id=8]
 [ext_resource path="res://assets/idle/idle-7.png" type="Texture" id=9]
-[ext_resource path="res://assets/jump/jump-1.png" type="Texture" id=10]
-[ext_resource path="res://assets/walking/walk-0.png" type="Texture" id=11]
-[ext_resource path="res://assets/walking/walk-1.png" type="Texture" id=12]
-[ext_resource path="res://assets/walking/walk-2.png" type="Texture" id=13]
-[ext_resource path="res://assets/walking/walk-3.png" type="Texture" id=14]
-[ext_resource path="res://assets/walking/walk-4.png" type="Texture" id=15]
-[ext_resource path="res://assets/walking/walk-5.png" type="Texture" id=16]
-[ext_resource path="res://assets/walking/walk-7.png" type="Texture" id=17]
-[ext_resource path="res://assets/jump/jump-11.png" type="Texture" id=18]
-[ext_resource path="res://assets/jump/jump-12.png" type="Texture" id=19]
-[ext_resource path="res://assets/jump/jump-13.png" type="Texture" id=20]
-[ext_resource path="res://assets/jump/jump-14.png" type="Texture" id=21]
-[ext_resource path="res://assets/jump/jump-15.png" type="Texture" id=22]
-[ext_resource path="res://assets/jump/jump-16.png" type="Texture" id=23]
-[ext_resource path="res://assets/jump/jump-17.png" type="Texture" id=24]
-[ext_resource path="res://assets/jump/jump-18.png" type="Texture" id=25]
-[ext_resource path="res://assets/jump/jump-19.png" type="Texture" id=26]
-[ext_resource path="res://assets/jump/jump-2.png" type="Texture" id=27]
-[ext_resource path="res://assets/jump/jump-3.png" type="Texture" id=28]
-[ext_resource path="res://assets/jump/jump-4.png" type="Texture" id=29]
-[ext_resource path="res://assets/jump/jump-5.png" type="Texture" id=30]
-[ext_resource path="res://assets/jump/jump-6.png" type="Texture" id=31]
-[ext_resource path="res://assets/jump/jump-7.png" type="Texture" id=32]
-[ext_resource path="res://assets/jump/jump-8.png" type="Texture" id=33]
-[ext_resource path="res://assets/jump/jump-9.png" type="Texture" id=34]
-[ext_resource path="res://assets/jump/jump-10.png" type="Texture" id=35]
+[ext_resource path="res://assets/jump/jump-11.png" type="Texture" id=10]
+[ext_resource path="res://assets/jump/jump-12.png" type="Texture" id=11]
+[ext_resource path="res://assets/jump/jump-13.png" type="Texture" id=12]
+[ext_resource path="res://assets/jump/jump-14.png" type="Texture" id=13]
+[ext_resource path="res://assets/jump/jump-15.png" type="Texture" id=14]
+[ext_resource path="res://assets/jump/jump-16.png" type="Texture" id=15]
+[ext_resource path="res://assets/jump/jump-17.png" type="Texture" id=16]
+[ext_resource path="res://assets/jump/jump-18.png" type="Texture" id=17]
+[ext_resource path="res://assets/jump/jump-19.png" type="Texture" id=18]
+[ext_resource path="res://assets/walking/walk-0.png" type="Texture" id=19]
+[ext_resource path="res://assets/walking/walk-1.png" type="Texture" id=20]
+[ext_resource path="res://assets/walking/walk-2.png" type="Texture" id=21]
+[ext_resource path="res://assets/walking/walk-3.png" type="Texture" id=22]
+[ext_resource path="res://assets/walking/walk-4.png" type="Texture" id=23]
+[ext_resource path="res://assets/walking/walk-5.png" type="Texture" id=24]
+[ext_resource path="res://assets/walking/walk-7.png" type="Texture" id=25]
+[ext_resource path="res://assets/jump/jump-2.png" type="Texture" id=26]
+[ext_resource path="res://assets/jump/jump-3.png" type="Texture" id=27]
+[ext_resource path="res://assets/jump/jump-4.png" type="Texture" id=28]
+[ext_resource path="res://assets/jump/jump-5.png" type="Texture" id=29]
+[ext_resource path="res://assets/jump/jump-6.png" type="Texture" id=30]
+[ext_resource path="res://assets/jump/jump-7.png" type="Texture" id=31]
+[ext_resource path="res://assets/jump/jump-8.png" type="Texture" id=32]
+[ext_resource path="res://assets/jump/jump-9.png" type="Texture" id=33]
+[ext_resource path="res://assets/jump/jump-10.png" type="Texture" id=34]
+[ext_resource path="res://assets/jump/jump-1.png" type="Texture" id=35]
 [ext_resource path="res://assets/buttons/touch_left.png" type="Texture" id=36]
 [ext_resource path="res://assets/buttons/touch_left_pressed.png" type="Texture" id=37]
 [ext_resource path="res://assets/buttons/touch_z.png" type="Texture" id=38]
@@ -54,25 +54,25 @@ animations = [ {
 "name": "idle",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "duck",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
-"loop": true,
-"name": "walk",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "jump_down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 27 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ],
+"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "walk",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ) ],
 "loop": true,
 "name": "jump_up",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 35 ) ],
+"loop": true,
+"name": "duck",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -228,14 +228,12 @@ action = "ui_z"
 visibility_mode = 0
 _sections_unfolded = [ "Transform" ]
 
-[node name="jump" type="AudioStreamPlayer2D" parent="." index="4"]
+[node name="jump" type="AudioStreamPlayer" parent="." index="4"]
 
 stream = ExtResource( 40 )
-volume_db = 0.0
+volume_db = -20.0
 autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
+mix_target = 0
 bus = "Master"
-area_mask = 1
 
 

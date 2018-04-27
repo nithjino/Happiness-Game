@@ -10,7 +10,7 @@ source_file="res://assets/slide/slide-1.png"
 source_md5="893be5a412a6aa3435506c5f416b5aec"
 
 dest_files=[ "res://.import/slide-1.png-081674cf056e8e4208cfd16a8de53a34.stex" ]
-dest_md5="a047d1652c5308ac065fd3ecc50963e4"
+dest_md5="a26246d9c8d8f9234a67a779f2d6bd37"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

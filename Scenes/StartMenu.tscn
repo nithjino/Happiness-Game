@@ -210,7 +210,7 @@ shape = SubResource( 3 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="6"]
 
 stream = ExtResource( 16 )
-volume_db = 0.0
+volume_db = -20.0
 autoplay = true
 mix_target = 0
 bus = "Master"
